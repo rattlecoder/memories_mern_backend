@@ -104,7 +104,7 @@ const likePost = async (req, res) => {
   }
 
   const updatedPost = await PostMessage.findByIdAndUpdate(id, thePost,{new:true});
-  res.json(updatePost);
+  res.json(updatedPost);
 };
 
 //comment on a post
