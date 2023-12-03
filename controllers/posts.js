@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const getPosts = async (req, res) => {
       const {page} = req.query;
       try {
-        const LIMIT = 8;
+        const LIMIT = 6;
         const startIndex = (Number(page)-1)*LIMIT;  //get starting index of every page
         const total = await PostMessage.countDocuments({}); //total no of docments
         //getting newest post with limit while skipping other pages
